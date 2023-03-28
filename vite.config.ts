@@ -35,7 +35,7 @@ export default defineConfig({
     /* 모바일 화면 확인용 스트립트입니다. */
     proxy: {
       '/api': {
-        target: 'https://192.168.0.95:3333',
+        target: 'https://localhost:8080',
         changeOrigin: true,
       },
     },
@@ -59,10 +59,6 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
-        'vue-i18n',
-        'vue/macros',
-        '@vueuse/head',
-        '@vueuse/core',
       ],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/composables', 'src/store'],
